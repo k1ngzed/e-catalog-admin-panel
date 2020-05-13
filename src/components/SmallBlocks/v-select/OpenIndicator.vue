@@ -1,0 +1,17 @@
+<template>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    version="1.1"
+    x="0px"
+    y="0px"
+    viewBox="0 0 512 512"
+    style="width: 18px; height: 18px;"
+    xml:space="preserve"
+  >
+    <path
+      d="M248.1,360.7l225.1-225.1c5.3-5.3,5.3-13.8,0-19.1c-5.3-5.3-13.8-5.3-19.1,0L238.6,332L23.1,116.5
+  c-5.3-5.3-13.8-5.3-19.1,0c-2.6,2.6-4,6.1-4,9.5c0,3.4,1.3,6.9,4,9.5l225.1,225.1C234.3,365.9,242.9,365.9,248.1,360.7z"
+    />
+  </svg>
+</template>

@@ -1,0 +1,348 @@
+.cols
+  &__wrap
+    // overflow: hidden
+    padding: 0.1px 0
+    margin-bottom: 40px
+  &__list
+    display: flex
+    flex-wrap: wrap
+    padding: 20px 0 0 20px
+    margin: -20px
+  &__item
+    border: 0 solid transparent
+    border-width: 0 20px 20px 0
+    &.col
+      &-12
+        width: 100%
+      &-6
+        width: 16.66666%
+        width: calc(100% / 6)
+      &-3
+        width: 33.33333%
+        width: calc(100% / 3)
+      &-2
+        width: 50%
+        width: calc(100% / 2)
+// .cols end
+  
+.liner
+  &--pink-grey
+    position: relative
+    padding-bottom: 12px
+    margin-bottom: 20px
+    &:before
+      position: absolute
+      content: ''
+      top: 100%
+      left: 0
+      right: 0
+      height: 1px
+      background: $line-grey
+    &:after
+      position: absolute
+      content: ''
+      top: 100%
+      left: 0
+      width: 87px
+      height: 1px
+      background: $line-pink
+  // &--purple-grey end
+// liner end
+
+.alert
+  display: block
+  width: 100%
+  padding: 5px 10px
+  background: $grey
+  border-radius: 3px
+  margin-bottom: 15px
+  &.default
+    color: $grey
+    background: transparentize($grey, .8)
+  &.success
+    color: $green
+    background: transparentize($green, .8)
+  &.error
+    color: $red
+    background: transparentize($red, .8)
+// .alert end
+
+.error
+  &__message
+    display: block
+    width: 100%
+    // font-size: 12px
+    line-height: 1
+    font-size: 0.857em
+    padding: 5px 15px
+  &__list
+    padding-left: 15px
+    li
+      list-style-type: circle
+      &.valid
+        color: $text-green
+      &.invalid
+        color: $text-red
+  &.red
+    color: $text-red
+  &.grey
+    color: $text-grey
+  &.green
+    color: $text-green
+  &.bd-red
+    border-color: $line-red !important
+  &.bd-green
+    border-color: $line-green !important
+// .error end
+
+.clamp
+  display: -webkit-box
+  -webkit-box-orient: vertical
+  overflow: hidden
+  text-overflow: ellipsis
+  margin-bottom: 10px
+  &--line-2
+    -webkit-line-clamp: 2
+// clamp
+
+.hamburger
+  &--parent
+    position: relative
+  &--button
+    position: absolute
+    top: 50%
+    right: 0
+    width: 20px
+    height: 20px
+    transform: translateY(-50%)
+    span
+      position: absolute
+      top: 50%
+      right: 0
+      width: 100%
+      height: 2px
+      background: transparentize($dark, .2)
+      transform: translateY(-50%)
+      transition: all .15s ease-in-out
+      border-radius: 1px
+      &:first-child,
+      &:last-child
+        transform: translateY(0)
+      &:first-child
+        top: 6px
+      &:last-child
+        width: 14px
+        top: auto
+        bottom: 5px
+  &--action
+    &:hover
+      .hamburger--button
+        span
+          &:last-child
+            width: 100%
+
+// .hamburger end
+
+.show_pw
+  position: relative
+  width: 100%
+  input
+    padding-right: 36px
+  &__btn
+    position: absolute
+    top: 50%
+    right: 0
+    height: 100%
+    cursor: pointer
+    outline: 0
+    border: none
+    padding: 8px
+    background: transparent
+    transform: translateY(-50%)
+    .svg-icon
+      fill: $light-grey
+    &:hover
+      .svg-icon
+        fill: $pink
+  &.is-active
+    .show_pw__btn .svg-icon
+      fill: $pink
+// .show_pw end
+
+.dataList
+  &.category
+    .id
+      width: 20%
+    .title
+      width: 30%
+    .link
+      width: 30%
+    .button
+      width: 20%
+  &.brands
+    .id
+      width: 20%
+    .title
+      width: 20%
+    .link
+      width: 20%
+    .image
+      width: 15%
+      img
+        display: inline-block
+        max-width: 120px
+        max-height: 40px
+    .button
+      width: 25%
+  &.product
+    .image
+      width: 15%
+      img
+        display: inline-block
+        max-width: 120px
+        max-height: 40px
+    .name
+      width: 20%
+    .color
+      width: 20%
+    .price
+      width: 20%
+    .button
+      width: 25%
+  &--wrap
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+    padding: 5px 0
+    .id
+      padding-left: 5px
+    .title
+    .link
+    .image
+      &.upload
+        label
+          display: inline-block
+          cursor: pointer
+      .upload
+        &-input
+          display: none
+    .button
+      text-align: right
+      padding-right: 5px
+      .btn
+        &:last-child
+          margin-left: 5px
+    &:nth-of-type(2n)
+      border-radius: 4px
+      background: $lighter-grey
+  &--subList
+    width: 100%
+// .dataList end
+
+.threebox
+  color: $grey
+  font-weight: 500
+  font-size: 14px
+  position: relative
+  cursor: pointer
+  display: inline-block
+  &--icon
+    display: inline-block
+    position: relative
+    border: 1px solid $light-grey
+    border-radius: 2px
+    box-sizing: border-box
+    width: 14px
+    height: 14px
+    background-color: $white
+    z-index: 1
+    transition: border-color .25s cubic-bezier(.71,-.46,.29,1.46), background-color .25s cubic-bezier(.71,-.46,.29,1.46)
+    &:before,
+    &:after
+      content: ""
+      position: absolute
+      transform: rotate(45deg) scaleY(0)
+      transform-origin: center
+  &.allow
+    .threebox--icon
+      border-color: $el_primary
+      background: $el_primary
+      &:before
+        border: 1px solid $white
+        border-left: 0
+        border-top: 0
+        height: 7px
+        left: 4px
+        top: 1px
+        width: 3px
+        transform: rotate(45deg) scaleY(1)
+  &.deny
+    .threebox--icon
+      background: $white
+      &:before
+  &.force_deny
+    .threebox--icon
+      border-color: $red
+      background: $red
+      &:before,
+      &:after
+        width: 8px
+        height: 1px
+        top: 5px
+        left: 2px
+        background: $white
+      &:before
+        transform: rotate(45deg) scaleY(1)
+      &:after
+        transform: rotate(-45deg) scaleY(1)
+// threebox end
+
+.img
+  &-uploader
+    line-height: 1
+    .el-upload
+      display: inline-flex
+      justify-content: center
+      align-items: center
+      width: 100px
+      height: 100px
+      border: 1px dashed #d9d9d9
+      border-radius: 6px
+      cursor: pointer
+      position: relative
+      overflow: hidden
+      &:hover
+        border-color: #409eff
+    &-downloaded
+      display: block
+      width: 100%
+      object-fit: contain
+    &-icon
+      font-size: 28px
+      color: #8c939d
+      text-align: center
+    .el-upload__tip
+      line-height: 1.6
+    &.style-logo
+      .el-upload
+        width: auto
+        height: auto
+      .img-uploader
+        &-downloaded
+          width: auto
+          max-width: 300px
+          max-height: 100px
+    &.style-avatar
+      .el-upload
+        width: 120px
+        height: 120px
+        border-radius: 50%
+// .img end
+  
+.transition
+  transition: all .15s ease-in-out
+
+.zoom-on-hover .zoom
+  max-width: none
+  cursor: crosshair
+// .zoom-on-hover end

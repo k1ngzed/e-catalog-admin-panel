@@ -1,0 +1,61 @@
+.footer
+  background: $white
+  &__bg
+    &--gradient
+      position: relative
+      padding-top: 20px
+      background:  linear-gradient(120deg, $gradient-pink, $gradient-purple)
+  &--help
+    color: $white
+    &__inner
+      position: relative
+      display: flex
+      min-height: 110px
+      padding-left: 110px
+      .thumb
+        position: absolute
+        bottom: 0
+        left: 0
+        width: 110px
+      .desc
+        display: flex
+        flex-direction: column
+        justify-content: center
+        width: 100%
+        padding-left: 30px
+        margin-bottom: 20px
+        .title
+          font-size: 14px
+          font-size: 1em
+          line-height: 16px
+          font-weight: 600
+          margin-bottom: 8px
+        a
+          color: $white
+          text-decoration: underline
+          &:hover
+            color: $primary
+            text-decoration: none
+  &--upper
+    .inner
+      display: flex
+      flex-wrap: wrap
+      padding: 30px 0
+    .item
+      width: 20%
+      .title
+        font-size: 14px
+        font-size: 1em
+        font-weight: 600
+        color: $purple
+        margin-bottom: 24px
+      ul
+        li
+          margin-bottom: 20px
+  &--lower
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    padding: 18px 24px
+    border-top: 1px solid $bg-grey
+// footer end

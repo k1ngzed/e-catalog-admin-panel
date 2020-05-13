@@ -1,0 +1,11 @@
+// Media Mixin
+=media-max_w($a)
+	@media (max-width: #{$a})
+		@content
+=media-min_w($a)
+	@media (min-width: #{$a})
+		@content
+
+=size($a,$b: $a)
+	width: $a
+	height: $b

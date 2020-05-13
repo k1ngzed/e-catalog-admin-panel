@@ -1,0 +1,42 @@
+button,
+input
+  &[type=submit],
+  &[type=button]
+    padding: 7px 20px
+    line-height: 18px
+    cursor: pointer
+    outline: 0
+    border: 1px solid transparent
+    border-radius: 3px
+
+.btn
+  color: $dark
+  padding: 7px 23px
+  line-height: 18px
+  cursor: pointer
+  outline: 0
+  border: 1px solid transparent
+  border-radius: 3px
+  background: transparent
+  transition: background .15s ease-in-out, color .15s ease-in-out
+  &-small
+    padding: 5px 10px
+    line-height: 16px
+    // font-size: 12px
+    font-size: 0.857em
+  &-default
+    background-color: transparent
+    &:hover,
+    &:focus
+      color: $dark
+      background-color: transparentize($primary, .8)
+  &-primary
+    background-color: $primary
+    &:hover,
+    &:focus
+      box-shadow: 0 2px 4px -2px transparentize($dark, .3)
+  &-danger
+    background-color: $red
+    &:hover,
+    &:focus
+      box-shadow: 0 2px 4px -2px transparentize($dark, .3)

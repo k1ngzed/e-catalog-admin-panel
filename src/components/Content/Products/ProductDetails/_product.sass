@@ -1,0 +1,340 @@
+.product
+  &--sp
+    &__tabs
+      &--contain
+        >.title
+          font-size: 25px
+      &--navbar
+        margin-bottom: 30px
+        ul
+          display: flex
+          li
+            overflow: hidden
+            margin-right: 10px
+            a
+              display: inline-block
+              position: relative
+              font-weight: 600
+              line-height: 18px
+              padding: 10px 29px
+              color: $dark
+              background: $white
+              border: 1px solid $line-grey
+              border-radius: 3px
+              transition: all .15s ease-in-out
+              span
+                color: $grey
+                font-size: 12px
+                margin-left: 8px
+              &.router-link-exact-active,
+              &:hover
+                border-color: transparent
+                background: $primary
+              &.router-link-exact-active
+                cursor: default
+            &:last-child
+              margin-right: 0
+      // navbar end
+      &--description
+        display: flex
+        flex-wrap: wrap
+        margin-bottom: 40px
+        &--head
+          margin-bottom: 25px
+          .title
+            font-size: 24px
+            font-size: 1.714em
+            line-height: 28px
+            font-weight: 600
+            margin-bottom: 15px
+          .inner
+            display: flex
+            justify-content: space-between
+            &__rate
+              .rates,
+              .question
+                display: inline-block
+                color: $purple
+                line-height: 15px
+              .rates
+                margin-left: 15px
+                margin-right: 15px
+            &__actions
+              button
+                padding: 0
+                outline: 0
+                border: none
+                background: transparent
+                cursor: pointer
+                margin-right: 30px
+                .svg-icon
+                  fill: $purple
+                  margin-top: -2px
+                  margin-right: 8px
+                &:last-child
+                  margin-right: 0
+        .item
+          flex-basis: 84px
+          flex-grow: 3
+          margin-left: 30px
+          &:first-child
+            margin-left: 0
+        // item end
+        .thumb
+          flex-grow: 6
+        // .thumb end
+        .property
+          flex-grow: 4
+          &__inner
+            .title
+              display: block
+              line-height: 18px
+              font-weight: 600
+              margin-bottom: 10px
+            ul
+              li
+                position: relative
+                padding-left: 15px
+                margin-bottom: 10px
+                &:after
+                  position: absolute
+                  content: ''
+                  left: 0
+                  top: 50%
+                  transform: translateY(-50%)
+                  width: 5px
+                  height: 5px
+                  border-radius: 50%
+                  background: $purple
+            .link
+              display: block
+              margin-bottom: 10px
+              color: $purple
+              &:hover
+                text-decoration: underline
+            .brand
+              a
+                color: $purple
+                span
+                  display: inline-block
+                  padding-bottom: 5px
+                  strong
+                    font-weight: 600
+                img
+                  width: 50px
+                &:hover
+                  span
+                    text-decoration: underline
+        // proparty end
+        .summary
+          &__topSeller
+            position: relative
+            padding: 15px
+            margin-bottom: 20px
+            max-width: 350px
+            border: 1px solid $line-grey
+            border-radius: 3px
+            box-shadow: 0 2px 6px 0 transparentize($black, .85)
+            .help
+              position: absolute
+              top: -10px
+              right: 15px
+              color: $purple
+              .svg-icon
+                fill: $purple
+                margin-left: 7px
+              &:hover
+                text-decoration: underline
+            .title
+              color: $grey
+              font-size: 12px
+              font-size: 0.857em
+              line-height: 14px
+              margin-bottom: 10px
+            .price
+              font-size: 16px
+              font-size: 1.143em
+              line-height: 18px
+              font-weight: 600
+              margin-bottom: 15px
+            .delivery,
+            .payment
+              position: relative
+              margin-bottom: 15px
+              padding-left: 25px
+              .svg-icon
+                position: absolute
+                fill: $grey
+                left: 0
+                top: 2px
+            .color
+              margin-bottom: 15px
+            .more
+              display: flex
+              justify-content: space-between
+              margin-bottom: 15px
+              &__link
+                color: $purple
+                &:hover
+                  text-decoration: underline
+              .warning
+                display: none
+                .svg-icon
+                  fill: $grey
+            .button
+              &--wrapper
+                margin-bottom: 15px
+                .btn
+                  width: 100%
+            &:hover
+              .more
+                .warning
+                  display: inline-block
+          // &__topSeller end
+          .brand
+            &__logo
+              margin-right: 20px
+              margin-bottom: 5px
+              img
+                max-width: 110px
+                height: 14px
+            &__rate
+              .rate
+                margin-right: 15px
+              .rates
+                color: $grey
+                font-size: 12px
+                font-size: 0.857em
+                line-height: 14px
+                &:hover
+                  color: $purple
+
+        // summary end
+      // description end
+      &--offers
+        margin-bottom: 40px
+        .offers
+          &--head
+            display: flex
+            justify-content: space-between
+            flex-wrap: wrap
+            align-items: center
+            margin-bottom: 15px
+            .link
+              a
+                font-size: 16px
+                font-size: 1.143em
+                line-height: 18px
+                &:hover
+                  .svg-icon
+                    fill: $purple
+          &--list
+            .item
+              position: relative
+              display: flex
+              flex-wrap: wrap
+              justify-content: space-between
+              align-items: center
+              padding: 20px 0
+              z-index: 0
+              .brand
+                display: flex
+                flex-direction: column
+                &__logo
+                  margin-bottom: 10px
+                  img
+                    max-width: 157px
+                    height: 20px
+                &__rate
+                  .rate
+                    margin-right: 15px
+              .more
+                color: $purple
+                &:hover
+                  text-decoration: underline
+              .delivery,
+              .payment
+                .svg-icon
+                  fill: $grey
+                  margin-right: 10px
+              .delivery
+                margin-bottom: 10px
+              .color
+                margin-bottom: 10px
+              .buy
+                position: relative
+                .btn-primary
+                  &:hover
+                    color: $white
+                    background: $grey
+                .warning
+                  position: absolute
+                  right: -25px
+                  top: 50%
+                  transform: translateY(-50%)
+                  opacity: 0
+                  visibility: hidden
+                  transition: opacity .15s ease-in-out
+                  .svg-icon
+                    fill: $grey
+              &:before
+                position: absolute
+                content: ''
+                width: 100vw
+                height: 100%
+                left: 50%
+                top: 0
+                transform: translateX(-50%)
+                border-bottom: 1px solid $line-grey
+                transition: background .15s ease-in-out
+                z-index: -1
+              &:first-child
+                &:before
+                  border-top: 1px solid $line-grey
+              &:hover
+                .buy
+                  .warning
+                    opacity: 1
+                    visibility: visible
+                &:before
+                  background: $lighter-grey
+      // offers end
+  // &--sp = single page end
+  &--delivery-info
+    position: relative
+    padding: 3em 0
+    z-index: 0
+    .link
+      margin-top: 15px
+      a
+        color: $purple
+        font-weight: 600
+        &:hover
+          text-decoration: underline
+    &:before
+      position: absolute
+      content: ''
+      top: 0
+      left: 50%
+      width: 100vw
+      height: 100%
+      transform: translateX(-50%)
+      background: #fefefe
+      background: transparentize($black, .98)
+      z-index: -1
+  // &--delivery-info end
+// .product end
+
+.colors
+  &--lower
+    display: flex
+    flex-wrap: wrap
+// .colors end
+
+.color
+  &--wrap
+    width: 35px
+// .color end
+
+.price-charts
+  margin-bottom: 40px

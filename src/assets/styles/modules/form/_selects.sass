@@ -1,0 +1,72 @@
+// select
+//   display: inline-block
+//   width: 100%
+//   padding: 7px 8px
+//   line-height: 18px
+//   outline: 0
+//   border: none
+//   color: $text-dark
+//   background: $white
+//   border-radius: 3px
+//   border: 1px solid $pink
+//   cursor: pointer
+//   // appearance: none
+//   // background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png)
+//   // background-repeat: no-repeat
+//   // background-position: calc(100% - 10px) center
+//   option:disabled
+//     color: $text-grey
+//     background: $lighter-grey
+//   option:hover
+//     color: $purple
+//     background: $primary
+//   &:focus
+//     border-color: $primary
+
+.v-select
+  width: 100%
+  button[type=button]
+    border: none
+    line-height: 1
+    padding: 0
+// .v-select end
+
+.vs
+  &__dropdown
+    &-toggle
+      padding: 5.5px 11px
+      line-height: 18px
+      border-radius: 3px
+      border: 1px solid $pink
+    &-menu
+      top: calc(100% - 2px)
+      padding: 5px 0
+      // box-shadow: none
+      border: 1px solid $light-grey
+      border-top-color: transparent
+      border-radius: 0 0 3px 3px
+      background: $white
+      li
+        padding: 5.5px 20px
+        line-height: 18px
+  &__selected
+    font-size: 1em
+    padding: 0
+    margin: 0
+    &-options
+      padding: 0
+  &__search,
+  &__search:focus
+    padding: 0
+    margin: 0
+  &__actions
+    padding: 0
+  &__clear
+    position: relative
+    top: -1px
+  &--open
+    .vs
+      &__dropdown
+        &-toggle
+          border-color: $primary
+// .vs end

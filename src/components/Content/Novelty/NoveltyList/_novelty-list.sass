@@ -1,0 +1,28 @@
+.novelty
+  &__list
+    &--inner
+      display: flex
+      justify-content: center
+      align-items: center
+      height: 100%
+      padding: 10px
+      border: 1px solid $line-grey
+      img
+        display: inline-block
+        width: 35px
+        height: 35px
+        object-fit: cover
+        margin-right: 10px
+      .desc
+        width: calc(100% - 45px)
+        font-size: 12px
+        line-height: 14px
+        .title
+          margin-bottom: 6px
+          max-height: 27.27px
+      &:hover
+        .desc
+          color: $dark
+          .title
+            color: $purple
+// novelty end
