@@ -1,6 +1,6 @@
 # info
 
-- 1.0.0 version
+- ...
 
 ## Project setup
 
